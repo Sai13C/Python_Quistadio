@@ -1,0 +1,51 @@
+#Monthly Payroll System
+
+
+print("Janitor P18000")
+print("Clerk   P22000")
+print("Cashier P24000")
+print("Manager P40000")
+
+name = (input("Employee Name: "))
+job_position = str(input("Job Position: ")).title()
+
+overtime_hour = 0;
+absence_deduction = 0;
+
+
+match job_position:
+    case "Janitor":
+        salary = 18000
+        actual_hours = 88
+    case "Clerk":
+        salary = 22000
+        actual_hours = 80
+    case "Cashier":
+        salary = 24000
+        actual_hours = 94
+    case "Manager ":
+        salary = 40000
+        actual_hours = 84
+    case _:
+        print("Job Position")
+
+#processing
+
+basic_half_monthly_salary = salary / 2
+
+hourly_rate = basic_half_monthly_salary / actual_hours
+if actual_hours < hourly_rate: absent_hours = actual_hours - actual_hours
+absent_salary = salary - absent_hours
+if actual_hours > hourly_rate: Overtime_hours = actual_hours - hourly_rate
+overtime_rate = hourly_rate * 1.25
+overtime_pay = overtime_hour * overtime_rate
+net_salary = basic_half_monthly_salary - absence_deduction + overtime_pay
+
+
+print(net_salary)
+print(overtime_rate)
+print(overtime_pay)
+print(basic_half_monthly_salary)
+print(absent_hours)
+print(hourly_rate)
+print(actual_hours)
