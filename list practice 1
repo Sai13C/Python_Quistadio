@@ -1,0 +1,13 @@
+#LIST
+#BASICS: add, remove, sort
+
+
+
+print("\n--- 1. List Basics ---")
+fruits = ["banana", "apple", "cherry"]
+fruits.append("mango")  # add to the end
+fruits.remove("banana")  # remove by value
+fruits.sort()  # sort A-Z
+print("Fruits:", fruits)
+print("First fruit:", fruits[0])
+print("Total fruits:", len(fruits))
